@@ -268,7 +268,7 @@ function formatTime(min, sec) {
   const sec1 = sec.toString();
   return `${min1.padStart(2, '0')}:${sec1.padStart(2, '0')}`;
 }
-
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Returns a string in reverse order.
  *
@@ -279,10 +279,10 @@ function formatTime(min, sec) {
  *   reverseString('abcdef') => 'fedcba'
  *   reverseString('12345') => '54321'
  */
-function reverseString(/* str */) {
-  throw new Error('Not implemented');
+function reverseString(str) {
+  return str.split('').reverse().join('');
 }
-
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Returns a string with characters in alphabetical order.
  *
