@@ -169,7 +169,7 @@ function removeFirstOccurrences(str, sub) {
   const part2 = str.substring(str.indexOf(sub) + sub.length, str.length);
   return part1.concat(part2);
 }
-
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Remove the last occurrence of a substring from a string.
  *
@@ -183,15 +183,12 @@ function removeFirstOccurrences(str, sub) {
  *   removeLastOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
 function removeLastOccurrences(str, sub) {
-  const temp = str.split(sub);
-  let out = '';
-  temp.forEach((e, i) => {
-    out += e;
-    if (i === 0 && temp.length > 2) {
-      out += sub;
-    }
-  });
-  return out;
+  if (!str.includes(sub)) {
+    return str;
+  }
+  const part1 = str.substring(0, str.lastIndexOf(sub));
+  const part2 = str.substring(str.lastIndexOf(sub) + sub.length, str.length);
+  return part1.concat(part2);
 }
 
 /**
