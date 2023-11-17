@@ -231,7 +231,7 @@ function startsWith(str, sub) {
   }
   return false;
 }
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Checks if a string ends with a specific substring.
  *
@@ -243,10 +243,13 @@ function startsWith(str, sub) {
  *   endsWith('Hello World', 'World') => true
  *   endsWith('Hello World', 'Hello') => false
  */
-function endsWith(/* str, substr */) {
-  throw new Error('Not implemented');
+function endsWith(str, sub) {
+  if (str.endsWith(sub)) {
+    return true;
+  }
+  return false;
 }
-
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Returns a time string in the "mm:ss" format.
  *
