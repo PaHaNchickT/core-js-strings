@@ -367,7 +367,7 @@ function isPalindrome(str) {
   }
   return false;
 }
-
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Find the longest word in the sentence. If there are multiple longest words,
  * the function returns the first one encountered.
@@ -380,10 +380,20 @@ function isPalindrome(str) {
  *   findLongestWord('A long and winding road') => 'winding'
  *   findLongestWord('No words here') => 'words'
  */
-function findLongestWord(/* sentence */) {
-  throw new Error('Not implemented');
+function findLongestWord(sent) {
+  const str = sent.split(' ');
+  let temp = str[0];
+  if (str.length === 1) {
+    return sent;
+  }
+  sent.split(' ').forEach((e, i) => {
+    if (i > 0 && e.length > str[i - 1].length) {
+      temp = e;
+    }
+  });
+  return temp;
 }
-
+//20+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Returns the string where each word is reversed.
  *
