@@ -25,7 +25,7 @@ function getStringLength(num) {
   }
   return num.split('').length;
 }
-
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Returns true if the value is a string, otherwise returns false.
  *
@@ -49,7 +49,7 @@ function isString(str) {
   }
   return false;
 }
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Returns the result of concatenation of two strings.
  *
@@ -65,7 +65,7 @@ function isString(str) {
 function concatenateStrings(str1, str2) {
   return str1.concat(str2);
 }
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Returns the first character of the given string.
  *
@@ -77,8 +77,11 @@ function concatenateStrings(str1, str2) {
  *   getFirstChar('cat') => 'c'
  *   getFirstChar('') => ''
  */
-function getFirstChar(/* value */) {
-  throw new Error('Not implemented');
+function getFirstChar(str) {
+  if (str[0] === undefined) {
+    return str;
+  }
+  return str.charAt(0);
 }
 
 /**
