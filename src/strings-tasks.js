@@ -424,10 +424,18 @@ function reverseWords(str) {
  *   invertCase('JavaScript is Fun') => 'jAVAsCRIPT IS fUN'
  *   invertCase('12345') => '12345'
  */
-function invertCase(/* str */) {
-  throw new Error('Not implemented');
+function invertCase(str) {
+  let out = '';
+  str.split('').forEach((e) => {
+    if (e === e.toLowerCase()) {
+      out += e.toUpperCase();
+    } else if (e === e.toUpperCase()) {
+      out += e.toLowerCase();
+    }
+  });
+  return out;
 }
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Returns the result of string template and given parameters firstName and lastName.
  * Please do not use concatenation, use template string :
