@@ -393,7 +393,7 @@ function findLongestWord(sent) {
   });
   return temp;
 }
-//20+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Returns the string where each word is reversed.
  *
@@ -404,10 +404,15 @@ function findLongestWord(sent) {
  *   reverseWords('Hello World') => 'olleH dlroW'
  *   reverseWords('The Quick Brown Fox') => 'ehT kciuQ nworB xoF'
  */
-function reverseWords(/* str */) {
-  throw new Error('Not implemented');
+function reverseWords(str) {
+  let out = '';
+  str.split(' ').forEach((e) => {
+    out += e.split('').reverse().join('');
+    out += ' ';
+  });
+  return out.trimEnd();
 }
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Inverts the case of each character in the given string.
  *
