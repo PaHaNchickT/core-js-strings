@@ -316,7 +316,7 @@ function containsSubstring(str, sub) {
   }
   return false;
 }
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Returns the number of vowels in the string.
  * Vowels: 'a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'.
@@ -331,10 +331,20 @@ function containsSubstring(str, sub) {
  *   countVowels('aEiOu') => 5
  *   countVowels('XYZ') => 1
  */
-function countVowels(/* str */) {
-  throw new Error('Not implemented');
+function countVowels(str) {
+  const ref = ['a', 'e', 'i', 'o', 'u', 'y'];
+  const str1 = str.toLowerCase().split('');
+  let count = 0;
+  str1.forEach((e1) => {
+    ref.forEach((e2) => {
+      if (e1 === e2) {
+        count += 1;
+      }
+    });
+  });
+  return count;
 }
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Returns true if the string is a palindrome; otherwise false.
  * https://en.wikipedia.org/wiki/Palindrome
