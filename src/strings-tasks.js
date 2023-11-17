@@ -19,8 +19,11 @@
  *   getStringLength(null) => 0
  *   getStringLength(undefined) => 0
  */
-function getStringLength(/* value */) {
-  throw new Error('Not implemented');
+function getStringLength(num) {
+  if (Boolean(num) === false) {
+    return 0;
+  }
+  return num.split('').length;
 }
 
 /**
