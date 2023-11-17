@@ -523,10 +523,177 @@ function extractEmails(str) {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-function encodeToRot13(/* str */) {
-  throw new Error('Not implemented');
+function encodeToRot13(str) {
+  let out = '';
+  str.split(' ').forEach((e1) => {
+    e1.split('').forEach((e) => {
+      switch (e) {
+        case 'A':
+          out += 'N';
+          break;
+        case 'B':
+          out += 'O';
+          break;
+        case 'C':
+          out += 'P';
+          break;
+        case 'D':
+          out += 'Q';
+          break;
+        case 'E':
+          out += 'R';
+          break;
+        case 'F':
+          out += 'S';
+          break;
+        case 'G':
+          out += 'T';
+          break;
+        case 'H':
+          out += 'U';
+          break;
+        case 'I':
+          out += 'V';
+          break;
+        case 'J':
+          out += 'W';
+          break;
+        case 'K':
+          out += 'X';
+          break;
+        case 'L':
+          out += 'Y';
+          break;
+        case 'M':
+          out += 'Z';
+          break;
+        case 'a':
+          out += 'n';
+          break;
+        case 'b':
+          out += 'o';
+          break;
+        case 'c':
+          out += 'p';
+          break;
+        case 'd':
+          out += 'q';
+          break;
+        case 'e':
+          out += 'r';
+          break;
+        case 'f':
+          out += 's';
+          break;
+        case 'g':
+          out += 't';
+          break;
+        case 'h':
+          out += 'u';
+          break;
+        case 'i':
+          out += 'v';
+          break;
+        case 'j':
+          out += 'w';
+          break;
+        case 'k':
+          out += 'x';
+          break;
+        case 'l':
+          out += 'y';
+          break;
+        case 'm':
+          out += 'z';
+          break;
+        case 'N':
+          out += 'A';
+          break;
+        case 'O':
+          out += 'B';
+          break;
+        case 'P':
+          out += 'C';
+          break;
+        case 'Q':
+          out += 'D';
+          break;
+        case 'R':
+          out += 'E';
+          break;
+        case 'S':
+          out += 'F';
+          break;
+        case 'T':
+          out += 'G';
+          break;
+        case 'U':
+          out += 'H';
+          break;
+        case 'V':
+          out += 'I';
+          break;
+        case 'W':
+          out += 'J';
+          break;
+        case 'X':
+          out += 'K';
+          break;
+        case 'Y':
+          out += 'L';
+          break;
+        case 'Z':
+          out += 'M';
+          break;
+        case 'n':
+          out += 'a';
+          break;
+        case 'o':
+          out += 'b';
+          break;
+        case 'p':
+          out += 'c';
+          break;
+        case 'q':
+          out += 'd';
+          break;
+        case 'r':
+          out += 'e';
+          break;
+        case 's':
+          out += 'f';
+          break;
+        case 't':
+          out += 'g';
+          break;
+        case 'u':
+          out += 'h';
+          break;
+        case 'v':
+          out += 'i';
+          break;
+        case 'w':
+          out += 'j';
+          break;
+        case 'x':
+          out += 'k';
+          break;
+        case 'y':
+          out += 'l';
+          break;
+        case 'z':
+          out += 'm';
+          break;
+        default:
+          out += e;
+          break;
+      }
+    });
+    out += ' ';
+  });
+  return out.trimEnd();
 }
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Returns playid card id.
  *
