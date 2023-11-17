@@ -190,7 +190,7 @@ function removeLastOccurrences(str, sub) {
   const part2 = str.substring(str.lastIndexOf(sub) + sub.length, str.length);
   return part1.concat(part2);
 }
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Calculate the sum of character codes of the given string.
  *
@@ -203,10 +203,17 @@ function removeLastOccurrences(str, sub) {
  *   sumOfCodes('') => 0
  *   sumOfCodes() => 0
  */
-function sumOfCodes(/* str */) {
-  throw new Error('Not implemented');
+function sumOfCodes(str) {
+  if (typeof str !== 'string' || str[0] === undefined) {
+    return 0;
+  }
+  let count = 0;
+  str.split('').forEach((e, i) => {
+    count += str.charCodeAt(i);
+  });
+  return count;
 }
-
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Checks if a string starts with a specific substring.
  *
