@@ -718,8 +718,50 @@ function encodeToRot13(str) {
  *   'Q♠' => 50
  *   'K♠' => 51
  */
-function getCardId(/* value */) {
-  throw new Error('Not implemented');
+function getCardId(val) {
+  let out = 0;
+  let temp = '';
+  if (val[2] !== undefined) {
+    out += 10;
+    temp = `0${val[2]}`;
+  } else {
+    temp = val;
+  }
+  switch (temp[1]) {
+    case '♦':
+      out += 13;
+      break;
+    case '♥':
+      out += 26;
+      break;
+    case '♠':
+      out += 39;
+      break;
+    default:
+      break;
+  }
+  switch (temp[0]) {
+    case 'J':
+      out += 10;
+      break;
+    case 'Q':
+      out += 11;
+      break;
+    case 'K':
+      out += 12;
+      break;
+    default:
+      break;
+  }
+  if (Number.isNaN(+temp[0]) === true) {
+    out += 1;
+  } else {
+    out += +temp[0];
+  }
+  if (temp[2] !== undefined) {
+    out -= 1;
+  }
+  return out - 1;
 }
 
 module.exports = {
