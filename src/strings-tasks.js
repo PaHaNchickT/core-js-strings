@@ -467,7 +467,7 @@ function extractNameFromTemplate(str) {
   const reg = /(Hello, )|!/g;
   return str.replaceAll(reg, '');
 }
-
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Remove the first and last angle brackets from tag string
  *
@@ -479,10 +479,11 @@ function extractNameFromTemplate(str) {
  *   unbracketTag('<span>') => 'span'
  *   unbracketTag('<a>') => 'a'
  */
-function unbracketTag(/* str */) {
-  throw new Error('Not implemented');
+function unbracketTag(str) {
+  const reg = /<|>/g;
+  return str.replaceAll(reg, '');
 }
-
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Extracts e-mails from single string with e-mails list delimited by semicolons
  *
