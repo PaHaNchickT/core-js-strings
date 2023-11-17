@@ -452,7 +452,7 @@ function invertCase(str) {
 function getStringFromTemplate(name, sur) {
   return `Hello, ${name} ${sur}!`;
 }
-
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
  * Extracts a name from template string 'Hello, First_Name Last_Name!'.
  *
@@ -463,8 +463,9 @@ function getStringFromTemplate(name, sur) {
  *   extractNameFromTemplate('Hello, John Doe!') => 'John Doe'
  *   extractNameFromTemplate('Hello, Chuck Norris!') => 'Chuck Norris'
  */
-function extractNameFromTemplate(/* value */) {
-  throw new Error('Not implemented');
+function extractNameFromTemplate(str) {
+  const reg = /(Hello, )|!/g;
+  return str.replaceAll(reg, '');
 }
 
 /**
