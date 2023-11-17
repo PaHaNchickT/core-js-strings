@@ -162,15 +162,12 @@ function repeatString(str, t) {
  *   removeFirstOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
 function removeFirstOccurrences(str, sub) {
-  const temp = str.split(sub);
-  let out = '';
-  temp.forEach((e, i) => {
-    out += e;
-    if (i === 1 && temp.length > 2) {
-      out += sub;
-    }
-  });
-  return out;
+  if (!str.includes(sub)) {
+    return str;
+  }
+  const part1 = str.substring(0, str.indexOf(sub));
+  const part2 = str.substring(str.indexOf(sub) + sub.length, str.length);
+  return part1.concat(part2);
 }
 
 /**
